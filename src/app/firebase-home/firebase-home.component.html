@@ -1,0 +1,22 @@
+<div class="left" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+<div class="item item-1" class="full" fxFlex="50%">
+  <form>
+
+    <mat-form-field>
+      <input matInput placeholder="Name" value="" [(ngModel)]="model.NAME" name="NAME">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Lastname" value="" [(ngModel)]="model.LASTNAME" name="LASTNAME">
+    </mat-form-field>
+    <button mat-button (click)="clickSave()">Save</button>
+  </form>
+</div>
+</div>
+
+
+ 
+
+  <mat-card  *ngFor="let item of user | async" >
+    <h3>{{item.NAME}}</h3>
+    <button mat-button (click)="deleteUser(item.USERID)">Delete</button>
+  </mat-card>

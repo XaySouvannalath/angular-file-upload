@@ -1,0 +1,17 @@
+<!-- <img src="http://localhost:3000/uploads/docs-1546969900249.png" alt="" srcset=""> -->
+
+<input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+
+<button type="button" class="btn btn-success btn-s" (click)="uploadFile()" [disabled]="!uploader.getNotUploadedItems().length">
+  Upload an Image
+</button>
+
+<br>
+
+<!-- <div>
+  <label>PDF src</label>
+  <input type="text" placeholder="PDF src" [(ngModel)]="pdfSrc">
+</div> -->
+<!-- <pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: block;"></pdf-viewer> -->
+
+<!-- <a  href="{{ BASE_FILE_URL + FILE_NAME }}" target="_blank">{{BASE_FILE_URL + FILE_NAME}}</a> -->
